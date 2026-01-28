@@ -1,0 +1,6 @@
+.env*
+!.env.dummy
+/node_modules
+/dist
+/private
+.DS_Store

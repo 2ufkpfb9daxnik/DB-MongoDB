@@ -1,0 +1,32 @@
+{
+  "name": "db-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch",
+    "mql": "tsx scripts/mqlFileRunner.ts",
+    "db:up": "docker compose -f docker/docker-compose.yaml -p mongo8dev up -d --wait",
+    "db:down": "docker compose -f docker/docker-compose.yaml -p mongo8dev down",
+    "db:reset": "docker compose -f docker/docker-compose.yaml -p mongo8dev down -v"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^25.0.3",
+    "eslint": "^9.39.2",
+    "globals": "^17.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.51.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.1.1"
+  }
+}
