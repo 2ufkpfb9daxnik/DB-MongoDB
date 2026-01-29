@@ -33,29 +33,3 @@ export default [
     },
   },
 ];
-
-// import eslint from "@eslint/js";
-// import globals from "globals";
-// import tseslint from "typescript-eslint";
-
-// export default [
-//   eslint.configs.recommended,
-//   ...tseslint.configs.recommended,
-//   {
-//     // files: ["**/*.mongosh.js"], // 追記
-//     languageOptions: {
-//       sourceType: "module",
-//       globals: {
-//         ...globals.node,
-//         db: "readonly", // 追記
-//         printjson: "readonly", // 追記
-//       },
-//     },
-//     rules: {
-//       "@typescript-eslint/no-unused-vars": [
-//         "warn",
-//         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
-//       ],
-//     },
-//   },
-// ];
