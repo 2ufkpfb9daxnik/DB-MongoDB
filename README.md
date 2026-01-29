@@ -92,11 +92,11 @@ git switch main
 git merge upstream/main
 ```
 
-マージ処理の際には、以下のようにエディタが自動的に起動します。内容を確認したうえで、「続行」ボタンを押下してください。
+マージ処理では、以下のようにエディタが自動的に起動することがあります。内容を確認したうえで、「続行」ボタンを押下してください。
 
 ![img](./docs/figs/readme/git-01.png)
 
-マージ完了後、`MERGE_MSG` のタブは閉じて問題ありません。その後、VSCodeの「変更の同期」のボタンを押下して、自分のリモートリポジトリ (`origin`) に変更を反映させます。
+マージ完了後、`MERGE_MSG` のタブは閉じて問題ありません。その後、VSCodeの「変更の同期」のボタンを押下して、自分のリモートリポジトリ (`origin`) に変更を反映させてください。
 
 #### 自分の GitHub に演習課題などを保存するとき
 
@@ -132,19 +132,19 @@ docker compose -f docker/docker-compose.yaml -p mongo8dev up -d --wait
 
 mongosh ファイルは、拡張子を `mongosh.js` として、基本的に `mongosh` フォルダのなかに配置してください。必要に応じて`mongosh` フォルダのなかにサブフォルダを作成してください。
 
-例えば、`mongosh/14/create-s_users.mongosh.js` というファイルを作成したときは、次のコマンドで SQLファイル が実行できます。
+例えば、`mongosh/14/sample.mongosh.js` というファイルを作成したときは、次のコマンドで SQLファイル が実行できます。
 
 ```bash
-npm run mql mongosh/14/create-s_users.mongosh.js
+npm run mql mongosh/14/sample.mongosh.js
 ```
 
 また、`.vscode/tasks.json` にビルドタスクを定義しているので、`create-s_users.mongosh.js` のエディタタブがアクティブな状態で `[Ctrl]+[Shift]+[B]` を押下することでも、上記コマンドを実行することができます。
 
 ### TypeScriptファイルの実行
 
-TypeScriptファイルは、基本的に `src` フォルダのなかに、必要に応じてサブフォルダを作成して配置してください。
+TypeScriptファイル ([mongodb](https://www.npmjs.com/package/mongodb)や[mongoose](https://www.npmjs.com/package/mongoose)などのライブラリを使ってMongoDBを操作する場合) は、基本的に `src` フォルダのなかに、必要に応じてサブフォルダを作成して配置してください。
 
-例えば、`src/samples/helloWorld.ts` というファイルを作成したときは、次のコマンドで実行ができます。
+例えば、`src/samples/helloWorld.ts` というファイルを作成したときは、次のコマンドにより、プログラムの実行ができます。
 
 ```bash
 npx tsx src/samples/helloWorld.ts
